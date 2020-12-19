@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div style="display:flex">
+     <div style="width:50%">
+    <form action="add" method='post'>
+        {% csrf_token %}
+        <p>Enter Beam Energy( in eV)</p>
+        <input type="text" name="beamEnergy" value=""/><br><br>
+        <p>Enter Charge scattering factors</p>
+        <input type="text" name="array[1]" value=""/><br>
+        <input type="text" name="array[2]" value=""/><br>
+        <input type="text" name="array[3]" value=""/><br>
+        <input type="text" name="array[4]" value=""/><br>
+        <input type="text" name="array[5]" value=""/><br>
+        <input type="text" name="array[6]" value=""/><br>
+        <input type="text" name="array[7]" value=""/><br>
+    
+        <p>  Enter Magnetic scattering factors</p>
+        <input type="text" name="array[8]" value=""/><br>
+        <input type="text" name="array[9]" value=""/><br>
+        <input type="text" name="array[10]" value=""/><br>
+        <input type="text" name="array[11]" value=""/><br>
+        <input type="text" name="array[12]" value=""/><br>
+        <input type="text" name="array[13]" value=""/><br>
+        <input type="text" name="array[14]" value=""/><br>
+
+        <p> Select the type of graph</p>
+        <select id="cars" name="graphtype">
+            <option value="d">d-type</option>
+            <option value="k">k-type</option>
+            
+          </select>
+
+    
+        <button onclick="">Submit</button>
+    
+    </form>
+
+  </div>
+ 
+  <div style="width: 50%;">
+    {% block content %}
+  
+    
+  
+    {% endblock %}
+    </div>
+
+</div>
+    
+</body>
+</html>
